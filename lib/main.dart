@@ -1,12 +1,20 @@
+import 'package:CWCFlutter/controllers/menu_controller.dart';
+import 'package:CWCFlutter/controllers/restaurant_controller.dart';
 import 'package:CWCFlutter/screens/add_followers.dart';
 import 'package:CWCFlutter/screens/add_reviews.dart';
 import 'package:CWCFlutter/screens/edit_follower_count.dart';
 import 'package:CWCFlutter/screens/edit_name.dart';
-import 'package:CWCFlutter/screens/home.dart';
+import 'package:CWCFlutter/screens/home/home.dart';
 import 'package:CWCFlutter/screens/toggle_status.dart';
+import 'package:CWCFlutter/screens/update_menu.dart';
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  Get.put(RestaurantController());
+  Get.put(MenuController());
+  return runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override

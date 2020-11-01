@@ -1,6 +1,9 @@
+import 'package:CWCFlutter/controllers/restaurant_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/state_manager.dart';
 
 class ToggleStatus extends StatelessWidget {
+  final restoController = RestaurantController.to;
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,12 @@ class ToggleStatus extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               SizedBox(height: 16),
-              Switch(
-                onChanged: (value) => {},
-                activeColor: Colors.purple,
-                value: false,
+              Obx(
+                () => Switch(
+                  onChanged: (value) => restoController.setIsOpen(value),
+                  activeColor: Colors.purple,
+                  value: restoController.isOpen.value,
+                ),
               ),
             ],
           ),
