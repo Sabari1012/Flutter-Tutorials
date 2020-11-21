@@ -4,7 +4,7 @@ import 'package:CWCFlutter/screens/home/followers_card.dart';
 import 'package:CWCFlutter/screens/home/general_card.dart';
 import 'package:CWCFlutter/screens/home/menu_card.dart';
 import 'package:CWCFlutter/screens/home/reviews_card.dart';
-import 'package:CWCFlutter/widget/side_drawer.dart';
+import 'package:CWCFlutter/widget/drawer/side_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
