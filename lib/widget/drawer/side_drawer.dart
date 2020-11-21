@@ -23,6 +23,7 @@ class SideDrawer extends StatelessWidget {
             ExpansionTile(
               title: Text("State Management"),
               children: stateDrawerOptions(context),
+              initiallyExpanded: true,
             ),
           ],
         ),
