@@ -1,5 +1,6 @@
 import 'package:CWCFlutter/controllers/menu_controller.dart';
 import 'package:CWCFlutter/model/menu.dart';
+import 'package:CWCFlutter/widget/cheetah_button.dart';
 import 'package:CWCFlutter/widget/rounded_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
@@ -40,19 +41,15 @@ class UpdateMenu extends StatelessWidget {
               editingController: locationInputController,
             ),
             SizedBox(height: 16),
-            FlatButton(
-              child: Text(
-                "Submit",
-                style: TextStyle(color: Colors.white),
-              ),
-              onPressed: () => controller.setMenu(
+            CheetahButton(
+              "Submit",
+              () => controller.setMenu(
                 Menu(
                   name: nameInputController.text,
                   color: colorInputController.text,
                   location: locationInputController.text,
                 ),
               ),
-              color: Colors.deepOrange,
             ),
             SizedBox(height: 16),
             Obx(

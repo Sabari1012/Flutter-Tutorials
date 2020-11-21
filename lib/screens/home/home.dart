@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      appBar: AppBar(title: Text("GetX Tutorial")),
+      appBar: AppBar(title: Text("State Management")),
       drawer: SideDrawer(),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
