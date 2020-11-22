@@ -27,6 +27,10 @@ class AddFollowers extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(restoController.followerList[index]),
+                    leading: IconButton(
+                      icon: Icon(Icons.close),
+                      onPressed: () => restoController.removeFollower(index),
+                    ),
                   );
                 },
               ),

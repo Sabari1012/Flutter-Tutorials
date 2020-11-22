@@ -15,9 +15,9 @@ class EditName extends StatelessWidget {
         padding: EdgeInsets.all(24),
         child: Column(
           children: [
-            Obx(
-              () => Text(
-                restoController.name.value,
+            GetBuilder<RestaurantController>(
+              builder: (controller) => Text(
+                controller.name,
                 style: TextStyle(fontSize: 48),
               ),
             ),

@@ -13,20 +13,25 @@ class FollowersCard extends StatelessWidget {
     return InfoCard(
       title: "Followers",
       body: Obx(
-        () => ListView.builder(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          itemCount: controller.followerList.length,
-          itemBuilder: (context, index) {
-            return Padding(
-              child: Text(
-                "${controller.followerList[index]}",
-                style: TextStyle(fontSize: 16),
+        () => controller.followerList.length == 0
+            ? Text(
+                "No followers",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              )
+            : ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: controller.followerList.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    child: Text(
+                      "${controller.followerList[index]}",
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    padding: EdgeInsets.all(8),
+                  );
+                },
               ),
-              padding: EdgeInsets.all(8),
-            );
-          },
-        ),
       ),
     );
   }

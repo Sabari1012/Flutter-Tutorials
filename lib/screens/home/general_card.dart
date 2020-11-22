@@ -15,9 +15,9 @@ class GeneralCard extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Obx(
-            () => Text(
-              controller.name.value,
+          GetBuilder<RestaurantController>(
+            builder: (controller) => Text(
+              controller.name,
               style: TextStyle(fontSize: 22),
             ),
           ),

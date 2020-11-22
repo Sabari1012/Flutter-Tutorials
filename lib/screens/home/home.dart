@@ -20,6 +20,7 @@ class Home extends StatelessWidget {
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             GeneralCard(restoController),
             FollowersCard(restoController),

@@ -1,7 +1,7 @@
 import 'package:get/state_manager.dart';
 
 class RestaurantController extends GetxController {
-  final name = "Pizza Cabin".obs;
+  String name = "Pizza Cabin";
   final followerCount = 0.obs;
   final isOpen = true.obs;
   final followerList = [].obs;
@@ -9,13 +9,35 @@ class RestaurantController extends GetxController {
 
   static RestaurantController get to => Get.find<RestaurantController>();
 
+  Worker everWorker;
+
   @override
   void onInit() {
     super.onInit();
+
+    everWorker = ever(followerList, (List list) {
+      followerCount((list.length));
+      if (list.length >= 5) everWorker.dispose();
+    });
+    once(followerList, (value) => print("followerList updated first time $value"));
+    // debounce(
+    //   followerCount,
+    //   (value) => print("Count: $value"),
+    //   time: Duration(seconds: 1),
+    // );
+    interval(
+      followerCount,
+      (value) => print("Count: $value"),
+      time: Duration(seconds: 5),
+    );
   }
 
   setName(String restoName) {
-    name(restoName);
+    // call api
+
+    //set name from api data
+    name = restoName;
+    update();
   }
 
   incrementCount() {

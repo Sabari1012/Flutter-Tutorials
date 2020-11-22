@@ -5,6 +5,7 @@ import 'package:CWCFlutter/screens/add_reviews.dart';
 import 'package:CWCFlutter/screens/edit_follower_count.dart';
 import 'package:CWCFlutter/screens/edit_name.dart';
 import 'package:CWCFlutter/screens/home/home.dart';
+import 'package:CWCFlutter/screens/navigation/navigation_hub.dart';
 import 'package:CWCFlutter/screens/toggle_status.dart';
 import 'package:CWCFlutter/screens/update_menu.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
         'edit_follower_count': (context) => EditFollowerCount(),
         'add_reviews': (context) => AddReviews(),
         'update_menu': (context) => UpdateMenu(),
+        'navigation': (context) => NavigationHub(),
       },
     );
   }

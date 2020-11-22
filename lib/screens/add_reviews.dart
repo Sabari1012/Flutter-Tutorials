@@ -54,6 +54,10 @@ class AddReviews extends StatelessWidget {
                         Text(reviewEntry.value),
                       ],
                     ),
+                    leading: IconButton(
+                      icon: Icon(Icons.close),
+                      onPressed: () => restoController.removeReview(reviewEntry.key),
+                    ),
                   );
                 },
               ),

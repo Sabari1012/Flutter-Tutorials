@@ -13,22 +13,27 @@ class ReviewsCard extends StatelessWidget {
     return InfoCard(
       title: "Reviews",
       body: Obx(
-        () => ListView.builder(
-          shrinkWrap: true,
-          itemCount: controller.reviews.length,
-          itemBuilder: (context, index) {
-            MapEntry reviewEntry = controller.reviews.entries.elementAt(index);
+        () => controller.reviews.entries.length == 0
+            ? Text(
+                "No Reviews",
+                style: TextStyle(fontStyle: FontStyle.italic),
+              )
+            : ListView.builder(
+                shrinkWrap: true,
+                itemCount: controller.reviews.length,
+                itemBuilder: (context, index) {
+                  MapEntry reviewEntry = controller.reviews.entries.elementAt(index);
 
-            return ListTile(
-              title: Column(
-                children: [
-                  Text(reviewEntry.key),
-                  Text(reviewEntry.value),
-                ],
+                  return ListTile(
+                    title: Column(
+                      children: [
+                        Text(reviewEntry.key),
+                        Text(reviewEntry.value),
+                      ],
+                    ),
+                  );
+                },
               ),
-            );
-          },
-        ),
       ),
     );
   }
