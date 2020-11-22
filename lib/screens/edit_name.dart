@@ -1,5 +1,5 @@
 import 'package:CWCFlutter/controllers/restaurant_controller.dart';
-import 'package:CWCFlutter/widget/rounded_input.dart';
+import 'package:CWCFlutter/widget/cheetah_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +22,7 @@ class EditName extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            RoundedInput(
+            CheetahInput(
               hintText: "Restauarant Name",
               onSubmit: (value) => restoController.setName(value),
             )

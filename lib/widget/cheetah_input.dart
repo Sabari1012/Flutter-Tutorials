@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class RoundedInput extends StatelessWidget {
+class CheetahInput extends StatelessWidget {
   final String hintText;
   final Function(String) onSubmit;
   final TextEditingController editingController;
 
-  const RoundedInput({
+  const CheetahInput({
     @required this.hintText,
     @required this.onSubmit,
     this.editingController,

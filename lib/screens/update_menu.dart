@@ -1,7 +1,7 @@
 import 'package:CWCFlutter/controllers/menu_controller.dart';
 import 'package:CWCFlutter/model/menu.dart';
 import 'package:CWCFlutter/widget/cheetah_button.dart';
-import 'package:CWCFlutter/widget/rounded_input.dart';
+import 'package:CWCFlutter/widget/cheetah_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 
@@ -23,19 +23,19 @@ class UpdateMenu extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            RoundedInput(
+            CheetahInput(
               hintText: "Name",
               onSubmit: (value) => controller.setMenuName(value),
               editingController: nameInputController,
             ),
             SizedBox(height: 16),
-            RoundedInput(
+            CheetahInput(
               hintText: "Color",
               onSubmit: (value) => controller.setMenuColor(value),
               editingController: colorInputController,
             ),
             SizedBox(height: 16),
-            RoundedInput(
+            CheetahInput(
               hintText: "Location",
               onSubmit: (value) => controller.setMenuLocation(value),
               editingController: locationInputController,

@@ -25,6 +25,13 @@ class SideDrawer extends StatelessWidget {
               children: stateDrawerOptions(context),
               initiallyExpanded: true,
             ),
+            ListTile(
+              title: Text('Navigation'),
+              onTap: () => Navigator.pushNamed(
+                context,
+                'navigation',
+              ),
+            )
           ],
         ),
       ),

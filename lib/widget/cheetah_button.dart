@@ -13,16 +13,16 @@ class CheetahButton extends StatelessWidget {
       onPressed: onPressed,
       child: Text(
         text,
-        style: TextStyle(color: Colors.white, fontSize: 16),
+        style: TextStyle(color: Colors.black, fontSize: 16),
       ),
       shape: new RoundedRectangleBorder(
         side: BorderSide(
           width: 1,
           color: Colors.deepOrange,
         ),
-        borderRadius: BorderRadius.all(Radius.circular(4)),
       ),
-      color: Colors.black87,
+      color: Colors.white,
+      splashColor: Colors.deepOrange,
     );
   }
 }

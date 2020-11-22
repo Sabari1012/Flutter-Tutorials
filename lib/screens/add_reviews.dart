@@ -1,6 +1,6 @@
 import 'package:CWCFlutter/controllers/restaurant_controller.dart';
 import 'package:CWCFlutter/widget/cheetah_button.dart';
-import 'package:CWCFlutter/widget/rounded_input.dart';
+import 'package:CWCFlutter/widget/cheetah_input.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -20,13 +20,13 @@ class AddReviews extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            RoundedInput(
+            CheetahInput(
               hintText: "Name",
               onSubmit: (value) => print(value),
               editingController: nameInputController,
             ),
             SizedBox(height: 16),
-            RoundedInput(
+            CheetahInput(
               hintText: "Review",
               onSubmit: (value) => print(value),
               editingController: reviewInputController,
