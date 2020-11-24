@@ -1,5 +1,6 @@
 import 'package:CWCFlutter/widget/drawer/state_options.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class SideDrawer extends StatelessWidget {
   @override
@@ -23,14 +24,10 @@ class SideDrawer extends StatelessWidget {
             ExpansionTile(
               title: Text("State Management"),
               children: stateDrawerOptions(context),
-              initiallyExpanded: true,
             ),
             ListTile(
               title: Text('Navigation'),
-              onTap: () => Navigator.pushNamed(
-                context,
-                'navigation',
-              ),
+              onTap: () => Get.toNamed('navigation_hub'),
             )
           ],
         ),
